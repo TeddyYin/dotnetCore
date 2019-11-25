@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -8,6 +8,8 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.EntityFrameworkCore;
+using dotnetCore.Data;
 
 namespace dotnetCore
 {
@@ -24,6 +26,12 @@ namespace dotnetCore
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddRazorPages();
+
+            services.AddDbContext<dotnetCoreContext>(options =>
+                    options.UseSqlServer(Configuration.GetConnectionString("dotnetCoreContext")));
+
+            //services.AddDbContext<dotnetCoreContext>(options =>
+            //        options.UseMySQL(Configuration.GetConnectionString("dotnetCoreContext")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
