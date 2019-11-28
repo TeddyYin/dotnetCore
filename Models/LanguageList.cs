@@ -11,5 +11,7 @@ namespace dotnetCore.Models
         [Key]
         public Guid ID { get; set; }
         public string Name { get; set; }
+        public ICollection<User> User { get; set; }
+        public ICollection<LanguageContant> LanguageContant { get; set; }
     }
 }
