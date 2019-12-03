@@ -6,12 +6,11 @@ using System.Threading.Tasks;
 
 namespace dotnetCore.Models
 {
-    public class DefaultLanguage
+    public class ModuleList
     {
         [Key]
         public Guid ID { get; set; }
-        public Guid Type { get; set; }
-        public string en_US { get; set; }
-        public string zh_TW { get; set; }
+        public string Name { get; set; }
+        public string Status { get; set; }
     }
 }
