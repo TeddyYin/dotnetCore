@@ -24,9 +24,7 @@ namespace dotnetCore.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            //modelBuilder.Entity<LanguageList>()
-            //    .HasMany(x => x.User)
-            //    .WithOne(c => c.Language);
+
         }
     }
 }

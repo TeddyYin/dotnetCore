@@ -9,6 +9,14 @@
     <Compile Remove="Migrations\20191126034708_neo_test.Designer.cs" />
     <Compile Remove="Migrations\20191126034954_neo_test.cs" />
     <Compile Remove="Migrations\20191126034954_neo_test.Designer.cs" />
+    <Compile Remove="Migrations\20191203084129_refactoring_table_1641.cs" />
+    <Compile Remove="Migrations\20191203084129_refactoring_table_1641.Designer.cs" />
+    <Compile Remove="Migrations\20191203084157_refactoring_table_1642.cs" />
+    <Compile Remove="Migrations\20191203084157_refactoring_table_1642.Designer.cs" />
+    <Compile Remove="Migrations\20191203084431_refactoring_table_1644.cs" />
+    <Compile Remove="Migrations\20191203084431_refactoring_table_1644.Designer.cs" />
+    <Compile Remove="Migrations\20191203084807_refactoring_table_1648.cs" />
+    <Compile Remove="Migrations\20191203084807_refactoring_table_1648.Designer.cs" />
   </ItemGroup>
 
 
