@@ -25,7 +25,10 @@ namespace dotnetCore
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddRazorPages();
+            //services.AddRazorPages();
+
+            // change to mvc
+            services.AddControllersWithViews();
 
             services.AddDbContext<dotnetCoreContext>(options =>
                     options.UseSqlServer(Configuration.GetConnectionString("dotnetCoreContext")));
@@ -43,7 +46,11 @@ namespace dotnetCore
             }
             else
             {
-                app.UseExceptionHandler("/Error");
+                //app.UseExceptionHandler("/Error");
+
+                // change to mvc
+                app.UseExceptionHandler("/Home/Error");
+
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
@@ -57,7 +64,12 @@ namespace dotnetCore
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapRazorPages();
+                //endpoints.MapRazorPages();
+
+                // change to mvc
+                endpoints.MapControllerRoute(
+                    name: "default",
+                    pattern: "{controller=Home}/{action=Index}/{id?}");
             });
         }
     }
